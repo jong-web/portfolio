@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>개인 포트폴리오</title>
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/jquery.fullPage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header id="header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="로고">
+                </a>
+            </div>
+            <div class="menu_icon">
+                <a href="#">
+                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><title/><g data-name="1" id="_1"><path d="M441.13,166.52h-372a15,15,0,1,1,0-30h372a15,15,0,0,1,0,30Z"/><path d="M441.13,279.72h-372a15,15,0,1,1,0-30h372a15,15,0,0,1,0,30Z"/><path d="M441.13,392.92h-372a15,15,0,1,1,0-30h372a15,15,0,0,1,0,30Z"/></g></svg>
+                </a>
+            </div>
+        </header>
+        <nav id="nav">
+            <div class="close">
+                <a href="#">
+                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{fill:none;}</style></defs><title/><g data-name="Layer 2" id="Layer_2"><path d="M4,29a1,1,0,0,1-.71-.29,1,1,0,0,1,0-1.42l24-24a1,1,0,1,1,1.42,1.42l-24,24A1,1,0,0,1,4,29Z"/><path d="M28,29a1,1,0,0,1-.71-.29l-24-24A1,1,0,0,1,4.71,3.29l24,24a1,1,0,0,1,0,1.42A1,1,0,0,1,28,29Z"/></g><g id="frame"><rect class="cls-1" height="32" width="32"/></g></svg>
+                </a>
+            </div>
+            <ul>
+                <!-- data-menuanchor="home"가 없으면 css에 있는 .active를 인식하지 못하는데 js의 anchors에 속해 있는 li들을 인식하기 위해서 선언해줘야 한다. -->
+                <!-- css의 .active로 인해 color:white가 됨 -->
+                <li data-menuanchor="home"><a href="#home" class="active">홈</a></li>
+                <li data-menuanchor="portfolio"><a href="#portfolio">포트폴리오</a></li>
+                <li data-menuanchor="profile"><a href="#profile">프로필</a></li>
+                <li data-menuanchor="emails"><a href="#emails">이메일</a></li>
+            </ul>
+        </nav>
+        <!-- class="section"은 fullpage plugin에서 사용 -->
+        <!-- section의 class="home"은 nav > ul > li > a의 href="#home"과 연동 -->
+        <section class="section home" id="mo-home"><!-- id : main -> mo-home -->
+            <div class="text__inner">
+                <div class="ti1">let's <em>introduce</em></div>
+                <div class="ti2 split">I`m developer's</div>
+                <div class="ti3"><em>Welcome</em> to <em>my</em> portfolio</div>
+            </div>
+            <div id="webgl">
+                <!-- 3D 애니메이션 html문서 만들어서 src에 넣기 -->
+                <!-- <iframe src="#" frameborder="0"></iframe> -->
+            </div>
+        </section>
+        <section class="section portfolio" id="mo-portfolio">
+            <h2>portfolio</h2>
+            <div class="swiper_box">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="img/pp1.png" alt="포트폴리오1">
+                            <div class="slide_des">
+                                <ul>1. 사파리투어
+                                    <li>리뉴얼 홈페이지(PC 버전)</li>
+                                    <li>원본 : 온리원 아프리카, 아프리카 사파리 투어에서 만날 수 있는 동물 소개(https://onlyoneafrica.kr/travel-informations/african-animals-list/)</li>
+                                    <li>벤치마킹 : 엘르(https://www.elle.co.kr/)</li>
+                                    <li>Skill : HTML5 + CSS3 + jQuery</li>
+                                    <li>통합개발환경(IDE) : Visual Studio code</li>
+                                    <li>개발기간 : 약 2주</li>
+                                </ul>                                    
+                            </div>
+                            <div class="slide_button">
+                                <a href="https://jong-web.github.io/safariTour/">바로가기</a>
+                                <a href="pdf/safaritour.pdf" download="">기획서 다운로드</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/pp2.png" alt="포트폴리오2">
+                            <div class="slide_des">
+                                <ul>2. 멕시카나
+                                    <li>반응형 리뉴얼 홈페이지(PC + mobile)</li>
+                                    <li>원본 : 멕시카나(https://www.mexicana.co.kr/main/)</li>
+                                    <li>벤치마킹 : 탭코리아(https://tapkorea.kr/)</li>
+                                    <li>Skill : HTML5 + CSS3 + jQuery</li>
+                                    <li>통합개발환경(IDE) : Visual Studio code</li>
+                                    <li>개발기간 : 약 3주</li>
+                                </ul>                                    
+                            </div>
+                            <div class="slide_button">
+                                <a href="https://jong-web.github.io/mexicana/">바로가기</a>
+                                <a href="pdf/mexicana.pdf" download="">기획서 다운로드</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/pp3.png" alt="포트폴리오3">
+                            <div class="slide_des">
+                                <ul>3. 롯데칠성음료
+                                    <li>반응형 리뉴얼 홈페이지(PC + mobile)</li>
+                                    <li>원본 : 롯데칠성음료(https://company.lottechilsung.co.kr/kor/main/index.do)</li>
+                                    <li>벤치마킹 : 삼원특수지(https://www.samwonpaper.com/)</li>
+                                    <li>Skill : HTML5 + CSS3 + Javascript + jQuery</li>
+                                    <li>통합개발환경(IDE) : Visual Studio code</li>
+                                    <li>개발기간 : 약 3주</li>
+                                </ul>                                    
+                            </div>
+                            <div class="slide_button">
+                                <a href="https://jong-web.github.io/lottechilsung/">바로가기</a>
+                                <a href="pdf/lottechilsung.pdf" download="">기획서 다운로드</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/pp4.png" alt="포트폴리오4">
+                            <div class="slide_des">
+                                <ul>4. 마니사도서
+                                    <li>Back-End 홈페이지(PC 버전)</li>
+                                    <li>벤치마킹 : 동아출판(https://www.bookdonga.com/main.donga/)</li>
+                                    <li>Skill : JSP + MySQL + Servlet</li>
+                                    <li>통합개발환경(IDE) : Eclipse</li>
+                                    <li>기능 : 회원가입, 로그인, 게시판, 장바구니, 도서등록</li>
+                                    <li>개발기간 : 약 3주</li>
+                                </ul>                                    
+                            </div>
+                            <div class="slide_button">
+                                <a href="https://github.com/jong-web/manisa/tree/main/JSPBookShop">바로가기</a>
+                                <a href="pdf/manisa.pdf" download="">기획서 다운로드</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/pp5.png" alt="포트폴리오5">
+                            <div class="slide_des">
+                                <ul>5. 천년투어
+                                    <li>Back-End 홈페이지(PC 버전)</li>
+                                    <li>벤치마킹 : 모두투어(https://www.modetour.com/)</li>
+                                    <li>Skill : Spring boot3 + MariaDB</li>
+                                    <li>통합개발환경(IDE) : IntelliJ Community 버전</li>
+                                    <li>기능 : 회원가입, 로그인, 공지사항, 장바구니, 예약하기</li>
+                                    <li>개발기간 : 약 3주</li>
+                                </ul>                                    
+                            </div>
+                            <div class="slide_button">
+                                <a href="#">바로가기</a>
+                                <a href="#" download="">기획서 다운로드</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 슬라이드 아래의 점 -->
+                <div class="swiper-pagination"></div>
+                <!-- 슬라이드 좌우 버튼 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
+        <section class="section profile" id="mo-profile">
+            <div class="profile_box">
+                <div class="me">
+                    <h2>Profile</h2>
+                    <div class="my_photo">
+                        <img src="img/profile.png" alt="profile">
+                    </div>
+                    <div class="txt">
+                        <p>이름 : 김종민</p>
+                        <p>교육기관 : 연희직업전문학교</p>
+                        <p>교육과정 : (디지털 컨버전스) JAVA, Spring 기반 데이터 융합 웹 개발자 과정</p>
+                        <p>교육기간 : 2024.06.24 ~ 2024.12.10(113일)</p>
+                        <p>교육내용 : HTML5, CSS3, jQuery, Figma, JAVA, JSP, MySQL, Spring Framework, Spring boot 3</p>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h2>My Skill</h3>
+                    <div class="skill_box">
+                        <div class="container-skillbar">
+                            <div class="skillbar clearfix " data-percent="70%">
+                                <div class="skillbar-title" style="background: #DD1E2F;"><span>HTML5</span></div>
+                                <div class="skillbar-bar" style="background: #DD1E2F;"></div>
+                                <div class="skill-bar-percent">70%</div>
+                            </div> <!-- Ende Skill Bar -->
+                        
+                            <div class="skillbar clearfix " data-percent="65%">
+                                <div class="skillbar-title" style="background: #EBB035;"><span>CSS3</span></div>
+                                <div class="skillbar-bar" style="background: #EBB035;"></div>
+                                <div class="skill-bar-percent">65%</div>
+                            </div> <!-- Ende Skill Bar -->
+                        
+                            <div class="skillbar clearfix " data-percent="55%">
+                                <div class="skillbar-title" style="background: #06A2CB;"><span>jQuery</span></div>
+                                <div class="skillbar-bar" style="background: #06A2CB;"></div>
+                                <div class="skill-bar-percent">55%</div>
+                            </div> <!-- Ende Skill Bar -->
+                        
+                            <div class="skillbar clearfix " data-percent="40%">
+                                <div class="skillbar-title" style="background: #218559;"><span>Figma</span></div>
+                                <div class="skillbar-bar" style="background: #218559;"></div>
+                                <div class="skill-bar-percent">40%</div>
+                            </div> <!-- Ende Skill Bar -->
+                        
+                            <div class="skillbar clearfix " data-percent="75%">
+                                <div class="skillbar-title" style="background: #D0C6B1;"><span>Java</span></div>
+                                <div class="skillbar-bar" style="background: #D0C6B1;"></div>
+                                <div class="skill-bar-percent">75%</div>
+                            </div> <!-- Ende Skill Bar -->
+                        
+                            <div class="skillbar clearfix " data-percent="35%">
+                                <div class="skillbar-title" style="background: #192823;"><span>JSP</span></div>
+                                <div class="skillbar-bar" style="background: #454545;"></div>
+                                <div class="skill-bar-percent">35%</div>
+                            </div> <!-- Ende Skill Bar -->
+
+                            <div class="skillbar clearfix " data-percent="60%">
+                                <div class="skillbar-title" style="background: #a92f7c;"><span>MySQL</span></div>
+                                <div class="skillbar-bar" style="background: #a92f7c;"></div>
+                                <div class="skill-bar-percent">60%</div>
+                            </div> <!-- Ende Skill Bar -->
+                            <div class="skillbar clearfix " data-percent="25%">
+                                <div class="skillbar-title" style="background: #7c00fe;"><span>Spring Boot 3</span></div>
+                                <div class="skillbar-bar" style="background: #7c00fe;"></div>
+                                <div class="skill-bar-percent">25%</div>
+                            </div> <!-- Ende Skill Bar -->
+                        </div><!-- Ende container Skill Bar -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section email" id="mo-emails">
+            <div class="email_box">
+                <div class="email_animation">
+                    <div class="letter-image">
+                        <div class="animated-mail">
+                            <div class="back-fold"></div>
+                            <div class="letter">
+                                <div class="letter-border"></div>
+                                <div class="letter-title"></div>
+                                <div class="letter-context"></div>
+                                <div class="letter-stamp">
+                                    <div class="letter-stamp-inner"></div>
+                                </div>
+                            </div>
+                            <div class="top-fold"></div>
+                            <div class="body"></div>
+                            <div class="left-fold"></div>
+                        </div>
+                        <div class="shadow"></div>
+                    </div>
+                </div>
+                <div class="send_email">
+                    <h2>Contact Me</h2>
+                    <form class="gform pure-form pure-form-stacked"                     
+                        method="POST" 
+                        data-email="ehakwhg@gmail.com"
+                        action="https://script.google.com/macros/s/AKfycbwiCivFO3zCkUKkhRqZER_Y6ViC9cMfbsDuvdT-56T5Qs7Dxro9KtA1xzH9CRpI1MuVMA/exec">
+                        <!-- change the form action to your script url -->
+
+                        <div class="form-elements">
+                            <div class="pure-group">
+                                <label for="name">성&nbsp;&nbsp;&nbsp;명&nbsp;:&nbsp;</label>
+                                <input id="name" name="name" placeholder="당신의 성명을 작성해 주세요." />
+                            </div>
+
+                            <div class="pure-group">
+                                <label for="email">이메일&nbsp;:&nbsp;</label>
+                                <input id="email" name="email" type="email" value=""
+                                required placeholder="당신의 이메일을 작성해 주세요."/>
+                            </div>                   
+
+                            <div class="pure-group">
+                                <label for="message">메시지&nbsp;:&nbsp; </label>
+                                <textarea id="message" name="message" placeholder="편지 내용을 작성해 주세요."></textarea>
+                            </div>
+
+                            <div>
+                                <label for=""></label>
+                                <button class="button-success pure-button   button-xlarge">
+                                    <i class="fa fa-paper-plane"></i>&nbsp;보내기
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Customise the Thankyou Message People See when they submit the form: -->
+                        <div class="thankyou_message" style="display:none;">
+                            <h2>메일이 전송되었습니다.<em>감사합니다.</em></h2>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- 기본은 100vh, fp-auto-height를 하면 footer의 css 높이만큼 조절이 된다. -->
+        <footer class="section fp-auto-height">
+            <p>Copyright Personal Portfolio. All Rights Reserved.</p>
+            <a href="https://github.com/jong-web">
+                <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background="new 0 0 128 128" id="Social_Icons" version="1.1" viewBox="0 0 128 128" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="_x31__stroke"><g id="Github_1_"><rect clip-rule="evenodd" fill="none" fill-rule="evenodd" height="128" width="128"/><path clip-rule="evenodd" d="M63.996,1.333C28.656,1.333,0,30.099,0,65.591    c0,28.384,18.336,52.467,43.772,60.965c3.2,0.59,4.368-1.394,4.368-3.096c0-1.526-0.056-5.566-0.088-10.927    c-17.804,3.883-21.56-8.614-21.56-8.614c-2.908-7.421-7.104-9.397-7.104-9.397c-5.812-3.988,0.44-3.907,0.44-3.907    c6.42,0.454,9.8,6.622,9.8,6.622c5.712,9.819,14.98,6.984,18.628,5.337c0.58-4.152,2.236-6.984,4.064-8.59    c-14.212-1.622-29.152-7.132-29.152-31.753c0-7.016,2.492-12.75,6.588-17.244c-0.66-1.626-2.856-8.156,0.624-17.003    c0,0,5.376-1.727,17.6,6.586c5.108-1.426,10.58-2.136,16.024-2.165c5.436,0.028,10.912,0.739,16.024,2.165    c12.216-8.313,17.58-6.586,17.58-6.586c3.492,8.847,1.296,15.377,0.636,17.003c4.104,4.494,6.58,10.228,6.58,17.244    c0,24.681-14.964,30.115-29.22,31.705c2.296,1.984,4.344,5.903,4.344,11.899c0,8.59-0.08,15.517-0.08,17.626    c0,1.719,1.152,3.719,4.4,3.088C109.68,118.034,128,93.967,128,65.591C128,30.099,99.344,1.333,63.996,1.333" fill="black" fill-rule="evenodd" id="Github"/></g></g></svg>
+            </a>
+        </footer>
+        <div id="top">TOP</div>
+    </div>
+    <!-- Submit the Form to Google Using "AJAX" -->
+    <script data-cfasync="false" src="js/form-submission-handler.js"></script>
+    <!-- END -->
+</body>
+</html>

@@ -1,0 +1,663 @@
+@font-face {
+    font-family: 'HancomMalangMalang-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2406-1@1.0/HancomMalangMalang-Regular.woff2') format('woff2');
+    font-weight: 400; font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {margin: 0; padding: 0; box-sizing: border-box;}
+li {list-style: none;}
+a {text-decoration: none; color: #111; display: block; white-space: nowrap;}
+img {width: 100%;}
+body {font-family: 'HancomMalangMalang-Regular'; overflow-x: hidden;}
+.wrap {width: 100%;}
+header {
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%; height: 80px;
+    background-color: rgba(255,255,255,0.85);
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    padding: 0 10%;
+    border-bottom: 1px solid #B3C8CF;
+}
+header .logo {width: 200px; height: 40px;}
+
+header .menu_icon {display: none;}
+nav {position: fixed; right: 10%; top: 25px; z-index: 101;}
+nav .close a svg {display: none;}
+nav ul {display: flex;}
+nav ul li {margin-left: 80px;}
+nav ul li a {color: #B3C8CF; font-size: 18px;}
+nav ul li:hover a,
+nav ul li.active a {color: #044D75;}
+section {background-color: #F1F0E8;}
+section:nth-child(even) {background-color: #E5E1DA;}
+
+#main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.text__inner {
+    text-align: center;
+    color: #044D75;
+    position: relative;
+    z-index: 3000;
+}
+.text__inner > div {
+    font-size: 6vw;
+    line-height: 1.2;
+}
+.text__inner > div.ti1 em {
+    font-style: normal;
+}
+.text__inner > div.ti2 {
+    font-weight: bold;
+}
+.text__inner > div.ti3 em {
+    font-style: normal;
+}
+#webgl {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+#webgl iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #022234;
+}
+.portfolio .swiper_box {width: 83%; margin: 0 auto; position: relative;}
+.portfolio .swiper {width: 87%; margin: 0 auto;}
+.portfolio .swiper .swiper-wrapper {
+    height: 570px;
+}
+.portfolio .swiper .swiper-slide {
+    width: 100%; height: 550px;
+    color: black;
+    box-shadow: 1px 1px 10px #666;
+}
+.portfolio .swiper .swiper-slide .slide_des {
+    padding: 0.8rem 1.5rem;
+}
+.portfolio .swiper .swiper-slide .slide_des > ul {
+    color: #022234;
+    text-align: left;
+}
+.portfolio .swiper .swiper-slide .slide_des li:first-child {
+    margin-top: 10px;
+}
+.portfolio .swiper .swiper-slide .slide_des li {
+    color: #044D75;
+    text-align: left;
+    list-style: disc;
+    margin-left: 1.5rem;
+    margin-top: 0.3rem;
+    word-wrap:break-word;
+}
+.portfolio .swiper .swiper-slide .slide_button {
+    position: absolute;
+    left: 50%; bottom: 0.7rem; transform: translateX(-50%);
+    display: flex; justify-content: center; align-items: center;
+}
+.portfolio .swiper .swiper-slide .slide_button a {
+    padding: 0.5rem 0.9rem;
+    margin-right: 0.7rem;
+    border-radius: 0.8rem;
+    background-color: #044D75;
+    color: white;
+    border: 1px solid white;
+    transition: all 0.5s;
+}
+.portfolio .swiper .swiper-slide .slide_button a:hover {
+    background-color: white;
+    color: #044D75;
+    border: 1px solid #044D75;
+}
+.portfolio .swiper_box .swiper-pagination {
+    bottom: -25px;
+}
+.portfolio .swiper_box .swiper-pagination .swiper-pagination-bullet {
+    width: 50px; height: 6px;
+    border-radius: 3px;
+    margin: 0 0.4rem !important;
+}
+.portfolio .swiper_box .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #022234;
+}
+/* svg의 크기를 조절 */
+.portfolio .swiper_box .swiper-button-next,
+.portfolio .swiper_box .swiper-button-prev {
+    width: 50px; height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.portfolio .swiper_box .swiper-button-next:after {
+    content: ""; 
+    background-image: url(../img/nextarrow.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+.portfolio .swiper_box .swiper-button-prev:after {
+    content: "";
+    background-image: url(../img/prevarrow.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* profile */
+.profile .profile_box {
+    width: 80%; margin: 0 auto;
+    display: flex; justify-content: space-between;
+}
+.profile .profile_box > div {
+    width: 48%; padding: 40px; border-radius: 10px;
+    background-color: rgba(255,255,255,0.3); 
+}
+.profile .profile_box > div h2 {font-size: 30px; margin-bottom: 2rem;}
+.profile .profile_box > div p {line-height: 30px;}
+.container-skillbar {
+    width:100%;
+    padding-top:30px;
+    height:auto;
+    overflow:none;
+}
+.profile .profile_box .my_photo {
+    border-radius: 100%;
+    background-color: rgba(0,0,0,0.15);
+    width: 50%;
+    margin: 0 auto;
+}
+/* 스킬바 */
+.skillbar {
+    position:relative;
+    display:block;
+    margin-bottom:2rem;
+    width:100%;
+    background:#efefef;
+    height:30px;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    -webkit-transition:0.4s linear;
+    -moz-transition:0.4s linear;
+    -ms-transition:0.4s linear;
+    -o-transition:0.4s linear;
+    transition:0.4s linear;
+    -webkit-transition-property:width, background-color;
+    -moz-transition-property:width, background-color;
+    -ms-transition-property:width, background-color;
+    -o-transition-property:width, background-color;
+    transition-property:width, background-color;
+}
+.skillbar-title {
+    position:absolute;
+    top:0;
+    left:0;
+    width:110px;
+    font-weight:bold;
+    font-size:13px;
+    color:#fff;
+    background:#6adcfa;
+    -webkit-border-top-left-radius:3px;
+    -webkit-border-bottom-left-radius:4px;
+    -moz-border-radius-topleft:3px;
+    -moz-border-radius-bottomleft:3px;
+    border-top-left-radius:3px;
+    border-bottom-left-radius:3px;
+}
+.skillbar-title span {
+    white-space: nowrap;
+    display:block;
+    background:rgba(0, 0, 0, 0.15);
+    padding:0 15px;
+    height:30px;
+    line-height:30px;
+    -webkit-border-top-left-radius:3px;
+    -webkit-border-bottom-left-radius:3px;
+    -moz-border-radius-topleft:3px;
+    -moz-border-radius-bottomleft:3px;
+    border-top-left-radius:3px;
+    border-bottom-left-radius:3px;
+}
+.skillbar-bar {
+    height:30px;
+    width:110px;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+}
+.skill-bar-percent {
+    position:absolute;
+    right:10px;
+    top:0;
+    font-size:11px;
+    height:30px;
+    line-height:30px;
+    color:#ffffff;
+    color:rgba(0, 0, 0, 0.5);
+}
+
+.email .email_animation {
+    position: relative;
+}
+/* email_animation */
+.letter-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+.animated-mail {
+    position: absolute;
+    height: 150px;
+    width: 200px;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    transition: 0.4s;
+}
+.animated-mail .body {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 200px;
+    border-color: transparent transparent #89abcd transparent;
+    z-index: 3;
+}
+.animated-mail .top-fold {
+    position: absolute;
+    top: 50px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 50px 100px 0 100px;
+    -webkit-transform-origin: 50% 0%;
+    -webkit-transition: transform 0.4s 0.4s, z-index 0.2s 0.4s;
+    -moz-transform-origin: 50% 0%;
+    -moz-transition: transform 0.4s 0.4s, z-index 0.2s 0.4s;
+    transform-origin: 50% 0%;
+    transition: transform 0.4s 0.4s, z-index 0.2s 0.4s;
+    border-color: #6482ad transparent transparent transparent;
+    z-index: 2;
+}
+.animated-mail .back-fold {
+    position: absolute;
+    bottom: 0;
+    width: 200px;
+    height: 100px;
+    background: #7fa1c3;
+    z-index: 0;
+}
+.animated-mail .left-fold {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 50px 0 50px 110px;
+    border-color: transparent transparent transparent #7fa1c3;
+    z-index: 2;
+}
+.animated-mail .letter {
+    left: 20px;
+    bottom: 0px;
+    position: absolute;
+    width: 160px;
+    height: 60px;
+    background: white;
+    z-index: 1;
+    overflow: hidden;
+    -webkit-transition: 0.4s 0.2s;
+    -moz-transition: 0.4s 0.2s;
+    transition: 0.4s 0.2s;
+}
+.animated-mail .letter .letter-border {
+    height: 10px;
+    width: 100%;
+    background: repeating-linear-gradient(-45deg, #7fa1c3, #6482ad 8px, transparent 8px, transparent 18px);
+}
+.animated-mail .letter .letter-title {
+    margin-top: 10px;
+    margin-left: 5px;
+    height: 10px;
+    width: 40%;
+    background: #6482ad;
+}
+.animated-mail .letter .letter-context {
+    margin-top: 10px;
+    margin-left: 5px;
+    height: 10px;
+    width: 20%;
+    background: #6482ad;
+}
+.animated-mail .letter .letter-stamp {
+    margin-top: 30px;
+    margin-left: 120px;
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+    background: #6482ad;
+    opacity: 0.3;
+}
+.shadow {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    width: 400px;
+    height: 30px;
+    transition: 0.4s;
+    transform: translateX(-50%);
+    -webkit-transition: 0.4s;
+    -webkit-transform: translateX(-50%);
+    -moz-transition: 0.4s;
+    -moz-transform: translateX(-50%);
+    border-radius: 100%;
+    background: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+}  
+.letter-image.active .animated-mail {
+    transform: translateY(50px);
+    -webkit-transform: translateY(50px);
+    -moz-transform: translateY(50px);
+}
+.letter-image.active .animated-mail .top-fold {
+    transition: transform 0.4s, z-index 0.2s;
+    transform: rotateX(180deg);
+    -webkit-transition: transform 0.4s, z-index 0.2s;
+    -webkit-transform: rotateX(180deg);
+    -moz-transition: transform 0.4s, z-index 0.2s;
+    -moz-transform: rotateX(180deg);
+    z-index: 0;
+}
+.letter-image.active .animated-mail .letter {
+    height: 180px;
+}
+.letter-image.active .shadow {
+    width: 250px;
+}
+
+.email .email_box {width: 80%; margin: 0 auto; display: flex; justify-content: space-between;}
+.email .email_box > div {
+    /* width: 48%; */
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 10px; padding: 5%;
+}
+.email .email_box > div:first-child {width: 38%;}
+.email .email_box > div:last-child {width: 60%;}
+.email .email_box h2 {font-size: 30px; margin-bottom: 60px;}
+/* label + input, textarea, button 영역 */
+.email .email_box > div > div > div {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+    padding-left: 0;
+    font-size: 20px;
+}
+.email .email_box .form-elements div {
+    display: flex;
+    align-items: flex-start;
+    margin: 15px 0;
+}
+.email .email_box label {
+    padding: 10px 0;
+    display: block;
+    width: 70px;
+}
+.email .email_box input {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: transparent;
+    font-size: 18px;
+    width: 80%;
+}
+.email .email_box input::placeholder {
+    color: #044D75;
+    opacity: 0.5;
+    font-size: 14px;
+}
+.email .email_box textarea::placeholder {
+    color: #044D75;
+    opacity: 0.5;
+    font-size: 14px;
+    font-family: normal;
+}
+.email .email_box textarea {
+    height: 150px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    padding-top: 15px;
+    background-color: transparent;
+    font-size: 18px;
+    width: 80%;
+}
+.email .email_box button {
+    background-color: #044D75;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+footer {
+    width: 100%; padding: 1rem 0;
+    background-color: #044D75;
+}        
+footer p {
+    text-align: center;
+    color: #cfcfcf;
+}
+footer svg {
+    position: absolute; top: 1rem; right: 10%;
+    width: 1rem; height: 1rem;
+}
+footer svg path {
+    fill: white;
+}
+footer a:hover svg path {
+    fill: black;
+}
+/* 브라우저 화면 오른쪽의 navigation의 마지막 메뉴 숨김 */
+#fp-nav ul li:last-child {display: none;}
+/* navigation에 아이콘 사용 */
+/* navigation간의 간격 */
+#fp-nav ul li {margin-top: 12px;}
+#fp-nav ul li a span {
+    background-color: transparent;
+    background-image: url(../img/black-star.png);
+    background-size: cover;
+    width: 8px; height: 8px;
+    margin: -4px 0 0 -4px;
+}
+#fp-nav ul li a.active span {
+    background-image: url(../img/star.png);
+    background-size: cover;
+    width: 16px; height: 16px;
+    margin: -8px 0 0 -8px;
+}
+#top {
+    position: fixed; right: 2%; bottom: 4rem; width: 60px; height: 60px;
+    border-radius: 50%;
+    background-color: #044D75; color: white; opacity: 1;
+    text-align: center; line-height: 60px; cursor: pointer;
+}
+#top:hover {
+    opacity: 0.85;
+}
+
+/* 태블릿 버전 - 가로 */
+@media screen and (max-width:1279px) {
+    header {padding: 0 9%; height: 60px;}
+    header .logo {width: 180px; height: 40px;}
+    header .logo a {line-height: 30px;}
+    nav {right: 9%; top: 18px;}
+    nav ul li {margin-left: 70px;}
+    nav ul li a {font-size: 16px;}
+    .portfolio h2 {margin-bottom: 20px;}
+    .portfolio .swiper_box {width: 92%;}
+    .portfolio .swiper_box .swiper {width: 84%;}
+    .portfolio .swiper_box .swiper .swiper-wrapper {height: 70vh;}
+    .portfolio .swiper_box .swiper .swiper-slide {height: 68vh;}
+    .portfolio .swiper .swiper-slide .slide_des {padding: 0.5rem 1rem;}
+    .portfolio .swiper .swiper-slide .slide_des li {font-size: 14px; margin-top: 0.4rem;}
+    .portfolio .swiper .swiper-slide .slide_button {left: auto; right: 0; transform: translateX(0%);}
+    .portfolio .swiper .swiper-slide .slide_button a {font-size: 14px; padding: 0.4rem 0.8rem;}
+    .portfolio .swiper_box .swiper-pagination .swiper-pagination-bullet {width: 40px;}
+    .portfolio .swiper_box .swiper-button-next,
+    .portfolio .swiper_box .swiper-button-prev {
+        width: 40px; height: 40px;
+    }
+    .profile .profile_box {width: 82%;}
+    .email .email_box {width: 82%;}
+    #top {width: 50px; height: 50px; line-height: 50px;}
+}
+
+/* 테블릿 버전 - 세로 */
+@media screen and (max-width:767px) {
+    header {padding: 0 3%;}
+    nav {right: 3%;}
+    .creative__text--animation-1 {font-size: 3.6em; padding: 0 30px;}
+    nav ul li {margin-left: 30px;}
+    .portfolio .swiper_box {width: 88%;}
+    .portfolio .swiper_box .swiper {width: 80%;}
+    .portfolio .swiper .swiper-slide {box-shadow: none; background-color: #eeebe7;}
+    .portfolio .swiper_box .swiper-pagination .swiper-pagination-bullet {width: 30px;}
+    .portfolio .swiper_box .swiper-button-next,
+    .portfolio .swiper_box .swiper-button-prev {
+        width: 30px; height: 30px;
+    }
+    .profile .profile_box {flex-flow: column nowrap; margin-top: 55px;}
+    .profile .profile_box .my_photo {display: none;}
+    .profile .profile_box > div {
+        width: 100%;
+        margin: 1vh auto;
+        padding: 2vw 3vw;
+    }
+    .profile .profile_box > div h2 {
+        font-size: 20px;
+        margin-bottom: 1.2rem;
+        width: 100%;
+    }
+    .profile .profile_box .me {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    /* .profile .profile_box .my_photo {
+        margin: 20px 0 0 0;
+        width: 26%;
+        height: 50%;
+    } */
+    .profile .profile_box .txt{
+        width: 100%;
+        line-height: 24px;
+        margin-left: 1.2rem;
+        /* text-indent: -55px; 음수 : 내어쓰기 */
+    }
+    .container-skillbar {padding-top: 0;}
+    .skillbar {height: 24px; margin-bottom: 10px;}
+    .skillbar-title span {height: 100%; line-height: 24px;}
+    .skillbar-bar {height: 100%;}
+    .skill-bar-percent {height: 24px; line-height: 24px;}
+    
+    .email .email_box {width: 82%; height: 100%; flex-flow: column nowrap; padding: 4.2rem 0 7.5rem;}
+    .email .email_box button {margin-top: 10px;}
+    /* 이메일 애니메이션 영역 */
+    .email .email_box > div:first-child {
+        width: 100%; margin-top: 55px;
+        order: 2; /* 순서 변경*/
+        background-color: transparent;
+    }
+    /* 이메일 전송 영역 */
+    .email .email_box > div:last-child {width: 100%; order: 1; padding: 3% 5%;}
+    .email .email_box h2 {font-size: 25px; margin-bottom: 30px;}
+    .email .email_box textarea {height: 90px;}
+    .email .email_box button {padding: 8px 18px; font-size: 1rem; margin-top: 0;}
+    .letter-image {scale: 0.7; left: 42%;}
+    footer p {font-size: 14px;}
+    #top {width: 45px; height: 45px; line-height: 45px; font-size: 14px;}
+}
+
+/* 모바일 버전 */
+@media screen and (max-width:480px) {
+    .creative__text--animation-1 {font-size: 2.6em;}
+    header {
+        width: 100%; padding: 0 3; display: flex;
+        justify-content: space-between;
+    }
+    header .menu_icon {
+        /* 모바일 버전에서는 메뉴 아이콘 보임 */
+        display: block;
+        width: 30px; height: 30px;
+        margin-right: 2%;
+    }
+    header .menu_icon svg {
+        width: 100%; height: 100%;
+        fill: #044D75;
+    }
+    nav {
+        top: 0;
+        right: -100%;
+        width: 45%;
+        height: 100vh;
+        background-color: #044D75;
+        padding: 6vw 4vw 4vw 8vw;
+    }
+    nav .close {width: 25px; float: right;}
+    nav .close a svg {display: block; fill: #ddd;}
+    nav ul {margin-top: 50px; flex-flow: column nowrap;}
+    nav ul li {margin-left: 0;}
+    nav ul li a {padding: 20px 0; font-size: 18px; color: white;}
+    section {display: flex; align-items: center; justify-content: center; padding: 4vw;}
+    .home {width: 100%; height: 100vh; display: flex;
+        align-items: center; justify-content: center;}
+    .portfolio {width: 100%; height: 100vh; display: flex; flex-flow: column; justify-content: flex-start;}
+    .portfolio h2 {font-size: 20px; margin-top: 50px;}
+    .portfolio .swiper_box {width: 100%;}
+    .portfolio .swiper_box .swiper {width: 74%;}
+    .portfolio .swiper_box .swiper .swiper-slide {height: 68vh;}
+    .portfolio .swiper_box .swiper .swiper-slide li {margin-top: 0.1rem;}
+    .portfolio .swiper_box .swiper-pagination .swiper-pagination-bullet {width: 30px;}
+    
+    .profile {width: 100%;}
+    .profile .profile_box {width: 100%;}
+    .profile .profile_box > div {padding: 2vw; text-align: center;}
+    .profile .profile_box .me {flex-flow: column nowrap;}
+    .profile .profile_box .me .my_photo {margin: 0 auto;}
+    .profile .profile_box .me .txt {width: 83%; margin-left: 65px; margin-top: 20px;}
+    #fp-nav {display: none;}
+    .email label {white-space: nowrap;}
+    .email .email_box {width: 100%;}
+    .email .email_box > div {background-color: transparent;}
+    .email .email_box input {width: 78%;}
+    .email .email_box textarea {width: 78%;}
+    .email .email_box button {margin-top: 5px; font-size: 16px;}
+    .email .email_box > div:first-child {margin-top: 0px; height: 260px;}
+    .email .email_box h2 {font-size: 20px; margin-bottom: 30px;}
+    footer p {font-size: 12px;}
+    #top {bottom: 2%; right: 3%;}
+}
